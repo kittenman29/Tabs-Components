@@ -25,7 +25,7 @@ class TabLink {
     this.element = Array.from(links).forEach(link => {link.classList.add('tabs-link-selected')});
 
     // Add a class named "tabs-link-selected" to this link
-    this.element = this.link.classList.remove('tab-link-selected');
+    this.element = this.links.classList.remove('tabs-link-selected');
     
     // Call the select method on the item associated with this link
     this.links.classList.toggle('tabs-link-selected');
@@ -53,12 +53,10 @@ class TabItem {
 /* START HERE: 
 
 - Select all classes named ".tabs-link" and assign that value to the links variable
-
 - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
-
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 
 */
 
-links = document.querySelectorAll('.tab-links');
+links = document.querySelectorAll('.tabs-link');
 links.forEach( link => new TabLink(link));
